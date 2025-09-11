@@ -13,12 +13,12 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* gray-900 */
-            color: #e2e8f0;
+            background-color: #0D1117; /* Deep Charcoal */
+            color: #E6EDF3; /* Off-white */
         }
 
         .section-card {
-            background-color: rgba(30, 41, 59, 0.6); /* slate-800 with opacity */
+            background-color: rgba(22, 27, 34, 0.6); /* Dark Navy with opacity */
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -34,29 +34,30 @@
         }
 
         .skill-badge {
-            background-color: #374151; /* gray-700 */
+            background-color: #30363D; /* Darker Gray */
             border-radius: 9999px;
             padding: 0.5rem 1rem;
             font-size: 0.875rem;
             font-weight: 500;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .skill-badge:hover {
-            background-color: #3b82f6; /* blue-500 */
+            background-color: #22D3EE; /* Accent Cyan */
+            color: #0D1117;
         }
         
         .submission-item {
-            border-left: 3px solid #3b82f6;
+            border-left: 3px solid #22D3EE; /* Accent Cyan */
             transition: all 0.3s ease;
             padding: 1.5rem;
-            background-color: rgba(55, 65, 81, 0.5);
+            background-color: rgba(31, 41, 55, 0.5);
             border-radius: 0.5rem;
         }
 
         .submission-item:hover {
-            background-color: rgba(59, 130, 246, 0.1);
-            border-left-color: #60a5fa;
+            background-color: rgba(34, 211, 238, 0.1);
+            border-left-color: #67E8F9; /* Lighter Cyan */
             transform: translateX(5px);
         }
         
@@ -66,7 +67,7 @@
         }
 
         aside nav a:hover, aside nav a.active {
-            background-color: #1f2937; /* gray-800 */
+            background-color: #0D1117; /* Match main background for "cutout" effect */
             color: white;
         }
         
@@ -75,21 +76,21 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #111827;
+            background: #0D1117;
         }
         ::-webkit-scrollbar-thumb {
-            background: #4b5563; /* gray-600 */
+            background: #30363D; /* Darker Gray */
             border-radius: 10px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* gray-500 */
+            background: #8B949E; /* Lighter Gray */
         }
     </style>
 </head>
 
 <body class="antialiased">
     <!-- Mobile Header -->
-    <header class="md:hidden bg-gray-950/70 backdrop-blur-md fixed top-0 left-0 right-0 z-40 flex justify-between items-center p-4">
+    <header class="md:hidden bg-[#161B22]/70 backdrop-blur-md fixed top-0 left-0 right-0 z-40 flex justify-between items-center p-4">
         <div class="text-xl font-bold tracking-tighter text-white">
             <a href="#home">Ludovick L. Lopa</a>
         </div>
@@ -99,9 +100,9 @@
     </header>
 
     <!-- Sidebar Navigation -->
-    <aside id="sidebar" class="bg-gray-950 w-72 h-screen fixed top-0 left-0 z-50 flex-col p-8 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
+    <aside id="sidebar" class="bg-[#161B22] w-72 h-screen fixed top-0 left-0 z-50 flex-col p-8 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
         <div class="text-center mb-8">
-            <img class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-gray-700" src="https://placehold.co/150x150/111827/FFFFFF?text=LL" alt="Ludovick Lopa">
+            <img class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-gray-700" src="https://placehold.co/150x150/161B22/FFFFFF?text=LL" alt="Ludovick Lopa">
             <h1 class="text-2xl font-bold text-white">Ludovick L. Lopa</h1>
             <p class="text-sm text-gray-400">MD, MPH</p>
         </div>
@@ -132,7 +133,7 @@
 
             <!-- About Me -->
             <section id="about" class="section-card">
-                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">About Me</h2>
+                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">About Me</h2>
                 <p class="text-slate-300 leading-relaxed">
                     As a seasoned physician and public health practitioner with a decade of experience in Tanzania's health system, my work is centered on enhancing healthcare leadership and implementing Quality Improvement (QI) initiatives to create equitable health systems for rural and hard-to-reach communities. I am passionate about leveraging technology and data-driven strategies to improve healthcare delivery and am actively seeking collaborations in health systems, QI, leadership, and health equity to make a lasting impact.
                 </p>
@@ -140,10 +141,10 @@
 
             <!-- Skills -->
             <section id="skills" class="section-card">
-                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">Skills</h2>
+                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">Skills</h2>
                 <div class="space-y-8">
                     <div>
-                        <h3 class="text-xl font-semibold text-blue-300 mb-4">Leadership & Healthcare Management</h3>
+                        <h3 class="text-xl font-semibold text-cyan-300 mb-4">Leadership & Healthcare Management</h3>
                         <div class="flex flex-wrap gap-3">
                             <span class="skill-badge">Healthcare Leadership</span>
                             <span class="skill-badge">Strategic Planning</span>
@@ -153,7 +154,7 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-blue-300 mb-4">Technical & Analytical Skills</h3>
+                        <h3 class="text-xl font-semibold text-cyan-300 mb-4">Technical & Analytical Skills</h3>
                         <div class="flex flex-wrap gap-3">
                             <span class="skill-badge">Generative AI for Research & Work</span>
                             <span class="skill-badge">Data Management & Analysis (R, nVIVO, STATA)</span>
@@ -162,7 +163,7 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-blue-300 mb-4">Professional Development & Tools</h3>
+                        <h3 class="text-xl font-semibold text-cyan-300 mb-4">Professional Development & Tools</h3>
                         <div class="flex flex-wrap gap-3">
                             <span class="skill-badge">Training, Coaching & Capacity Building</span>
                             <span class="skill-badge">Microsoft Packages</span>
@@ -173,18 +174,18 @@
 
             <!-- My Qualifications -->
             <section id="qualifications" class="section-card">
-                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">My Qualifications</h2>
+                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">My Qualifications</h2>
                 <div class="space-y-4">
-                    <div class="p-4 bg-gray-800/50 rounded-lg">
-                        <p class="font-semibold text-blue-300">MSc. Healthcare Leadership (Ongoing)</p>
+                    <div class="p-4 bg-[#0D1117]/50 rounded-lg">
+                        <p class="font-semibold text-cyan-300">MSc. Healthcare Leadership (Ongoing)</p>
                         <p class="text-slate-400">Lancaster University (2025-2028)</p>
                     </div>
-                    <div class="p-4 bg-gray-800/50 rounded-lg">
-                        <p class="font-semibold text-blue-300">Master of Public Health (Distinction)</p>
+                    <div class="p-4 bg-[#0D1117]/50 rounded-lg">
+                        <p class="font-semibold text-cyan-300">Master of Public Health (Distinction)</p>
                         <p class="text-slate-400">Hanoi Medical University (2019 - 2020)</p>
                     </div>
-                    <div class="p-4 bg-gray-800/50 rounded-lg">
-                        <p class="font-semibold text-blue-300">Doctor of Medicine</p>
+                    <div class="p-4 bg-[#0D1117]/50 rounded-lg">
+                        <p class="font-semibold text-cyan-300">Doctor of Medicine</p>
                         <p class="text-slate-400">Kilimanjaro Christian Medical University College (2009 - 2014)</p>
                     </div>
                 </div>
@@ -192,9 +193,9 @@
             
             <!-- About the course -->
             <section id="course" class="section-card">
-                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">About the Course</h2>
+                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">About the Course</h2>
                 <p class="text-slate-300 leading-relaxed mb-4">
-                    The <span class="font-semibold text-blue-300">"Generative AI for Work & Research Productivity"</span> course by GRAPH Courses is an intensive 8-week live cohort program. It's designed to equip professionals with the skills to use no-code AI tools for automating tasks, analyzing data, and enhancing communication in a research and work environment.
+                    The <span class="font-semibold text-cyan-300">"Generative AI for Work & Research Productivity"</span> course by GRAPH Courses is an intensive 8-week live cohort program. It's designed to equip professionals with the skills to use no-code AI tools for automating tasks, analyzing data, and enhancing communication in a research and work environment.
                 </p>
                 <p class="text-slate-300 leading-relaxed">
                     The curriculum covers a wide range of topics, including leveraging Large Language Models (LLMs), building websites, automating data analysis, using AI for text analysis and literature reviews, creating custom GPTs and chatbots, and designing AI-driven communication assets.
@@ -203,42 +204,42 @@
 
             <!-- My Weekly Submissions -->
             <section id="submissions" class="section-card">
-                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">My Weekly Submissions</h2>
+                <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">My Weekly Submissions</h2>
                 <div class="space-y-6">
                     <div class="submission-item">
                         <h3 class="font-bold text-lg text-white mb-1">Week 1: Websites, Documents & Presentations</h3>
                         <p class="text-slate-400 mb-2">Exploring LLMs for generating structured text and building no-code websites.</p>
-                        <a href="#" class="font-medium text-blue-400 hover:text-blue-300">View Submission &rarr;</a>
+                        <a href="#" class="font-medium text-cyan-400 hover:text-cyan-300">View Submission &rarr;</a>
                     </div>
                     <div class="submission-item">
                         <h3 class="font-bold text-lg text-white mb-1">Week 2: AI-Automated Data Analysis</h3>
                         <p class="text-slate-400 mb-2">Using tools like Julius and ChatGPT Code Interpreter for data processing and visualization.</p>
-                        <a href="#" class="font-medium text-blue-400 hover:text-blue-300">View Submission &rarr;</a>
+                        <a href="#" class="font-medium text-cyan-400 hover:text-cyan-300">View Submission &rarr;</a>
                     </div>
                     <div class="submission-item">
                         <h3 class="font-bold text-lg text-white mb-1">Week 3: GenAI for Research & Text Analysis</h3>
                         <p class="text-slate-400 mb-2">Conducting literature searches and synthesizing knowledge from large text collections.</p>
-                        <a href="#" class="font-medium text-blue-400 hover:text-blue-300">View Submission &rarr;</a>
+                        <a href="#" class="font-medium text-cyan-400 hover:text-cyan-300">View Submission &rarr;</a>
                     </div>
                     <div class="submission-item">
                         <h3 class="font-bold text-lg text-white mb-1">Week 4: Custom GPTs and Chatbots</h3>
                         <p class="text-slate-400 mb-2">Building custom research assistants and interactive chatbots with specific knowledge bases.</p>
-                        <a href="#" class="font-medium text-blue-400 hover:text-blue-300">View Submission &rarr;</a>
+                        <a href="#" class="font-medium text-cyan-400 hover:text-cyan-300">View Submission &rarr;</a>
                     </div>
                     <div class="submission-item">
                         <h3 class="font-bold text-lg text-white mb-1">Week 5: AI for Task Automation</h3>
                         <p class="text-slate-400 mb-2">Designing AI agents and complex workflows to automate repetitive tasks.</p>
-                        <a href="#" class="font-medium text-blue-400 hover:text-blue-300">View Submission &rarr;</a>
+                        <a href="#" class="font-medium text-cyan-400 hover:text-cyan-300">View Submission &rarr;</a>
                     </div>
                     <div class="submission-item">
                         <h3 class="font-bold text-lg text-white mb-1">Week 6: GenAI for Communication and Outreach</h3>
                         <p class="text-slate-400 mb-2">Creating AI-generated research summaries, figures, and video abstracts.</p>
-                        <a href="#" class="font-medium text-blue-400 hover:text-blue-300">View Submission &rarr;</a>
+                        <a href="#" class="font-medium text-cyan-400 hover:text-cyan-300">View Submission &rarr;</a>
                     </div>
                     <div class="submission-item">
                         <h3 class="font-bold text-lg text-white mb-1">Week 7-8: Capstone Project & Showcase</h3>
                         <p class="text-slate-400 mb-2">Developing and presenting a final AI solution or tool that integrates course learnings.</p>
-                        <a href="#" class="font-medium text-blue-400 hover:text-blue-300">View Capstone Project &rarr;</a>
+                        <a href="#" class="font-medium text-cyan-400 hover:text-cyan-300">View Capstone Project &rarr;</a>
                     </div>
                 </div>
             </section>
@@ -296,6 +297,4 @@
     </script>
 </body>
 </html>
-
-
 
