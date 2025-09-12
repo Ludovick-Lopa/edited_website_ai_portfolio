@@ -95,7 +95,7 @@
             left: 0;
             width: 100%;
             height: 50%;
-            z-index: 0;
+            z-index: -1; /* Behind constellation */
             overflow: hidden;
             pointer-events: none;
         }
@@ -111,10 +111,23 @@
             from { transform: translateX(-100%); }
             to { transform: translateX(100vw); }
         }
+        
+        /* Constellation Background */
+        #constellation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Behind content, in front of viz */
+            pointer-events: none; 
+        }
     </style>
 </head>
 
 <body class="antialiased">
+    
+    <canvas id="constellation"></canvas>
     
     <!-- Animated Visualization Background -->
     <div class="viz-background">
@@ -200,7 +213,7 @@
             <!-- Sections -->
             <section id="about" class="section-card"><h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">About Me</h2><p class="text-slate-300 leading-relaxed">I am a seasoned physician and public health practitioner with a keen interest in healthcare equity, healthcare leadership and Quality Improvement (QI) initiatives. I leverage AI to automate complex processes, inform health system leaders, and create impactful interventions for rural and hard-to-reach populations.</p></section>
             <section id="skills" class="section-card"><h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">Skills</h2><div class="space-y-8"><div><h3 class="text-xl font-semibold text-cyan-300 mb-4">Leadership & Healthcare Management</h3><div class="flex flex-wrap gap-3"><span class="skill-badge">Healthcare Leadership</span><span class="skill-badge">Strategic Planning</span><span class="skill-badge">Project Management</span><span class="skill-badge">Stakeholder Collaboration</span><span class="skill-badge">Healthcare Systems Strengthening</span></div></div><div><h3 class="text-xl font-semibold text-cyan-300 mb-4">Technical & Analytical Skills</h3><div class="flex flex-wrap gap-3"><span class="skill-badge">Generative AI for Research & Work</span><span class="skill-badge">Data Management & Analysis (R, nVIVO, STATA)</span><span class="skill-badge">Quality Improvement (QI) Methodologies</span><span class="skill-badge">Technical Writing & Reporting</span></div></div><div><h3 class="text-xl font-semibold text-cyan-300 mb-4">Professional Development & Tools</h3><div class="flex flex-wrap gap-3"><span class="skill-badge">Training, Coaching & Capacity Building</span></div></div></div></section>
-            <section id="qualifications" class="section-card"><h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">My Qualifications</h2><div class="space-y-4"><div class="p-4 bg-[#0D1117]/50 rounded-lg"><p class="font-semibold text-cyan-300">MSc. Healthcare Leadership (Ongoing)</p><p class="text-slate-400">Lancaster University (2025-2028)</p></div><div class="p-4 bg-[#0D1117]/50 rounded-lg"><p class="font-semibold text-cyan-300">Master of Public Health</p><p class="text-slate-400">Hanoi Medical University (2019 - 2020)</p></div><div class="p-4 bg-[#0D1117]/50 rounded-lg"><p class="font-semibold text-cyan-300">Doctor of Medicine</p><p class="text-slate-400">Kilimanjaro Christian Medical University College (2009 - 2014)</p></div></div></section>
+            <section id="qualifications" class="section-card"><h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">My Qualifications</h2><div class="space-y-4"><div class="p-4 bg-[#0D1117]/50 rounded-lg"><p class="font-semibold text-cyan-300">MSc. Healthcare Leadership (Ongoing)</p><p class="text-slate-400">Lancaster University (2025-2028)</p></div><div class="p-4 bg-[#0D1117]/50 rounded-lg"><p class="font-semibold text-cyan-300">Master of Public Health</p><p class="text-slate-400">Hanoi Medical University (2019 - 2020)</p></div><div class="p-4 bg-[#0D1117]/50 rounded-lg"><p class="font-semibold text-cyan-300">Doctor of Medicine</p><p class="text-slate-400">KCMC University (2009 - 2014)</p></div></div></section>
             <section id="course" class="section-card"><h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">About the Course</h2><p class="text-slate-300 leading-relaxed mb-4">The <span class="font-semibold text-cyan-300">"Generative AI for Work & Research Productivity"</span> course by Ludovick Lopa is an intensive 8-week live cohort program. It's designed to equip professionals with the skills to use no-code AI tools for automating tasks, analyzing data, and enhancing communication in a research and work environment.</p><p class="text-slate-300 leading-relaxed">The curriculum covers a wide range of topics, including leveraging Large Language Models (LLMs), building websites, automating data analysis, using AI for text analysis and literature reviews, creating custom GPTs and chatbots, and designing AI-driven communication assets.</p></section>
             <section id="submissions" class="section-card"><h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-cyan-400 pb-2">My Weekly Submissions</h2><div class="space-y-6"><div class="submission-item"><h3 class="font-bold text-lg text-white mb-1">Week 1: Websites, Documents & Presentations</h3><p class="text-slate-400 mb-2">Exploring LLMs for generating structured text and building no-code websites.</p><a href="#" class="font-medium text-cyan-400 hover:text-cyan-300" target="_blank">View Submission &rarr;</a></div><div class="submission-item"><h3 class="font-bold text-lg text-white mb-1">Week 2: AI-Automated Data Analysis</h3><p class="text-slate-400 mb-2">Using tools like Julius and ChatGPT Code Interpreter for data processing and visualization.</p><a href="https://ludovick-lopa.github.io/edited_website_ai_portfolio/ai_week2_lopa.html" class="font-medium text-cyan-400 hover:text-cyan-300" target="_blank">View Submission &rarr;</a></div><div class="submission-item"><h3 class="font-bold text-lg text-white mb-1">Week 3: GenAI for Research & Text Analysis</h3><p class="text-slate-400 mb-2">Conducting literature searches and synthesizing knowledge from large text collections.</p><a href="https://ludovick-lopa.github.io/edited_website_ai_portfolio/data_analyst_posts.html" class="font-medium text-cyan-400 hover:text-cyan-300" target="_blank">View Submission &rarr;</a></div><div class="submission-item"><h3 class="font-bold text-lg text-white mb-1">Week 4: Custom GPTs and Chatbots</h3><p class="text-slate-400 mb-2">Building custom research assistants and interactive chatbots with specific knowledge bases.</p><a href="#" class="font-medium text-cyan-400 hover:text-cyan-300" target="_blank">View Submission &rarr;</a></div><div class="submission-item"><h3 class="font-bold text-lg text-white mb-1">Week 5: AI for Task Automation</h3><p class="text-slate-400 mb-2">Designing AI agents and complex workflows to automate repetitive tasks.</p><a href="#" class="font-medium text-cyan-400 hover:text-cyan-300" target="_blank">View Submission &rarr;</a></div><div class="submission-item"><h3 class="font-bold text-lg text-white mb-1">Week 6: GenAI for Communication and Outreach</h3><p class="text-slate-400 mb-2">Creating AI-generated research summaries, figures, and video abstracts.</p><a href="#" class="font-medium text-cyan-400 hover:text-cyan-300" target="_blank">View Submission &rarr;</a></div><div class="submission-item"><h3 class="font-bold text-lg text-white mb-1">Week 7-8: Capstone Project & Showcase</h3><p class="text-slate-400 mb-2">Developing and presenting a final AI solution or tool that integrates course learnings.</p><a href="#" class="font-medium text-cyan-400 hover:text-cyan-300" target="_blank">View Capstone Project &rarr;</a></div></div></section>
             
@@ -283,19 +296,28 @@
             window.addEventListener('resize', resizeCanvas);
 
             let particles = [];
-            const particleCount = Math.floor(canvas.width / 20);
+            const particleCount = Math.floor(window.innerWidth / 25); // Adjusted for density
 
-            for (let i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    radius: Math.random() * 1.5 + 0.5,
-                });
+            function initParticles() {
+                particles = [];
+                 for (let i = 0; i < particleCount; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        radius: Math.random() * 1.5 + 0.5,
+                    });
+                }
             }
+            initParticles();
+             window.addEventListener('resize', () => {
+                resizeCanvas();
+                initParticles();
+            });
+
 
             function draw() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                ctx.fillStyle = 'rgba(230, 237, 243, 0.6)'; // --text-main with opacity
 
                 particles.forEach(p => {
                     ctx.beginPath();
@@ -303,11 +325,11 @@
                     ctx.fill();
                 });
 
-                ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+                ctx.strokeStyle = 'rgba(230, 237, 243, 0.1)';
                 for (let i = 0; i < particles.length; i++) {
                     for (let j = i; j < particles.length; j++) {
-                        const dist = Math.sqrt(Math.pow(particles[i].x - particles[j].x, 2) + Math.pow(particles[i].y - particles[j].y, 2));
-                        if (dist < 100) {
+                        const dist = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
+                        if (dist < 120) {
                             ctx.beginPath();
                             ctx.moveTo(particles[i].x, particles[i].y);
                             ctx.lineTo(particles[j].x, particles[j].y);
@@ -317,10 +339,10 @@
                 }
                 
                  if (mouse.x && mouse.y) {
-                    ctx.strokeStyle = 'rgba(34, 211, 238, 0.2)';
-                    for (let i = 0; i < particles.length; i++) {
-                        const dist = Math.sqrt(Math.pow(mouse.x - particles[i].x, 2) + Math.pow(mouse.y - particles[i].y, 2));
-                         if (dist < 150) {
+                    ctx.strokeStyle = 'rgba(34, 211, 238, 0.25)';
+                     for (let i = 0; i < particles.length; i++) {
+                        const dist = Math.hypot(mouse.x - particles[i].x, mouse.y - particles[i].y);
+                         if (dist < 200) {
                             ctx.beginPath();
                             ctx.moveTo(mouse.x, mouse.y);
                             ctx.lineTo(particles[i].x, particles[i].y);
@@ -330,11 +352,18 @@
                 }
             }
             
-            window.addEventListener('mousemove', (e) => {
-                mouse.x = e.x;
-                mouse.y = e.y;
+            // Adjust mouse coordinates for canvas
+            const mainContent = document.querySelector('.md\\:ml-72');
+            mainContent.addEventListener('mousemove', (e) => {
+                 const rect = mainContent.getBoundingClientRect();
+                 mouse.x = e.clientX - rect.left;
+                 mouse.y = e.clientY - rect.top;
             });
-            
+             mainContent.addEventListener('mouseleave', () => {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
             function animate() {
                 draw();
                 requestAnimationFrame(animate);
