@@ -104,7 +104,7 @@
     <!-- Sidebar Navigation -->
     <aside id="sidebar" class="bg-[#161B22] w-72 h-screen fixed top-0 left-0 z-50 flex-col p-8 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
         <div class="text-center mb-8">
-            <img class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-gray-700 object-cover" src="https://cdn.jsdelivr.net/gh/Ludovick-Lopa/edited_website_ai_portfolio@main/PXL_20250710_122333743.MP.jpg" alt="Ludovick Lopa">
+            <img class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-gray-700 object-cover" src="https://cdn.jsdelivr.net/gh/Ludovick-Lopa/edited_website_ai_portfolio@main/Lopa%20libraru2.png" alt="Ludovick Lopa">
             <h1 class="text-2xl font-bold text-white">Ludovick L. Lopa</h1>
             <p class="text-sm text-gray-400">MD, MPH</p>
         </div>
@@ -123,13 +123,20 @@
         <main class="container mx-auto px-6 py-8 md:py-12">
             <!-- Hero Section -->
             <section id="home" class="min-h-screen flex items-center -mt-16 md:mt-0">
-                <div class="w-full">
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">
-                        Ludovick L. Lopa
-                    </h1>
-                    <p class="text-xl md:text-2xl text-slate-300 max-w-3xl">
-                        A portfolio for the "Generative AI for Work & Research" course. Exploring the intersection of public health, leadership, and artificial intelligence.
-                    </p>
+                <div class="w-full flex flex-col md:flex-row items-center justify-between gap-12">
+                    <!-- Left Column: Text -->
+                    <div class="md:w-1/2">
+                        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">
+                            Ludovick L. Lopa
+                        </h1>
+                        <p class="text-xl md:text-2xl text-slate-300 max-w-3xl">
+                            A portfolio for the "Generative AI for Work & Research" course. Exploring the intersection of public health, leadership, and artificial intelligence.
+                        </p>
+                    </div>
+                    <!-- Right Column: Image -->
+                    <div class="md:w-1/2 flex justify-center">
+                        <img class="rounded-lg shadow-2xl border-4 border-gray-800 max-w-sm w-full" src="https://cdn.jsdelivr.net/gh/Ludovick-Lopa/edited_website_ai_portfolio@main/Lopa%20libraru2.png" alt="Ludovick Lopa in a library">
+                    </div>
                 </div>
             </section>
 
@@ -269,7 +276,7 @@
             for (let i = 0; i < sidebarLinks.length; i++) {
                 sidebarLinks[i].addEventListener('click', () => {
                     if (window.innerWidth < 768) { // md breakpoint
-                       sidebar.classList.add('-translate-x-full');
+                        sidebar.classList.add('-translate-x-full');
                     }
                 });
             }
